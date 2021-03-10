@@ -11,10 +11,10 @@ import org.bson.types.ObjectId;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
-public class App {
-
-	private static Scanner reader;
+public class Application {
+	
 	private static MongoCollection<Document> collection;
+	private static Scanner reader;
 	
 	public static void main(String[] args) {
 		
@@ -24,15 +24,14 @@ public class App {
 		reader = new Scanner(System.in);
 		Integer op = 0;
 		do {
-			System.out.println("Choose option below");
-			System.out.println("----------------------");
-			System.out.println("1 - FindAll Customer");
+			System.out.println("------------ MENU ------------");
+			System.out.println("1 - FindAll customer");
 			System.out.println("2 - FindOne Customer");
 			System.out.println("3 - Create Customer");
 			System.out.println("4 - Update Customer");
 			System.out.println("5 - Delete Customer");
 			System.out.println("0 - Exit");
-			System.out.println("----------------------");
+			System.out.println("------------------------------");
 
 			op = reader.nextInt();
 			reader.nextLine();			
@@ -54,8 +53,8 @@ public class App {
 			case 5:
 				delete();							
 				break;
-
 			default:
+				System.out.println("Invalid Option");
 				break;
 			}
 			
