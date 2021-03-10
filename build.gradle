@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group = 'simple-java-mongodb'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.8'   
+    testImplementation 'junit:junit:4.12'
+}
